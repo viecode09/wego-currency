@@ -1,11 +1,11 @@
 $(document).ready ->
-  from_currency_text = "IDR"
-  to_currency_text = "USD"
+  
   $("#to_currency option").filter ->
-    return this.text == from_currency_text
+    return this.text == "IDR"
   .attr("selected", true)
+
   $("#from_currency option").filter ->
-    return this.text == to_currency_text
+    return this.text == "USD"
   .attr("selected", true)
 
   $("#number").keyup ->
