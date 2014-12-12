@@ -13,11 +13,11 @@ So Here's following technology that used in this Project :
 
 * Puma Server with 4 PUMA_WORKERS and 16 MAX_THREADS, DYNO Web 1X 1 (Heroku Free Plan)
 
-* Using Heroku Scheduler on Heroku for fetching data daily basis with Rake task pointing
+* Using Heroku Scheduler on Heroku for fetching data hourly with Rake task pointing
 
 * Apache Benchmark for Load Testing
 
-* Not yet tested with Unit Testing (Soon)
+* Not yet tested with Unit Testing
 
 
 Here's following Apache Benchmark Testing results :
