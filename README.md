@@ -1,4 +1,4 @@
-== README
+# About This Project
 
 This very simple Project is made for Wego Programming Test using Wego Currency API..
 
