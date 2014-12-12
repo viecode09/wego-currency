@@ -1,0 +1,8 @@
+
+<h1>Exchange Rate</h1>
+<div>
+	<p>FROM <%= select_tag :from_currency, options_for_select(@rates.map{|k,v| [k, v]}, "1"), class: "currency" %> To <%= select_tag :to_currency, options_for_select(@rates.map{|k,v| [k, v]}, "12385.233333"), class: "currency" %> <%= link_to "Switch","void(0);", id: "switch_link" %></p>
+	<p><%= text_field_tag :number %></p>
+	<p><strong>Result :</strong></p>
+	<div id="results"></div>
+</div>
