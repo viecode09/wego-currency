@@ -58,6 +58,8 @@ GEM
     multi_json (1.10.1)
     multi_xml (0.5.5)
     pg (0.17.1)
+    puma (2.10.2)
+      rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -127,6 +129,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   pg
+  puma
   rails (= 4.1.7)
   rails_12factor
   redis
