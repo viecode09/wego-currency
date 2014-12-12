@@ -16,4 +16,8 @@ class Rate
 	def self.get_data id=nil
 		id.nil? ? redis.hgetall("rates") : redis.hgetall("rates")[id.upcase]
 	end
+
+	def self.get_data_keys
+		get_data.map{|k, v| {name: k, val: v} }		
+	end
 end

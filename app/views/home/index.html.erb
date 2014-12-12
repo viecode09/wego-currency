@@ -1,8 +1,25 @@
-
 <h1>Exchange Rate</h1>
+<div ng-controller="RateCtrl">
+	<form>
+		<p>Number : <input type="text" ng-model="newRate.number" ng-keyup="calculate"></p>
+		<p>FROM : <select ng-model="fromCurrency" ng-options="currency.name for currency in currencies"></select> TO : <select ng-model="toCurrency" ng-options="currency.name for currency in currencies"></select></p>
+	</form>
+
+	<div id="results">
+		<div ng-if="fromCurrency.val >= toCurrency.val">
+			<strong>TOTAL : {{(toCurrency.val / fromCurrency.val) * newRate.number}}</strong>
+		</div>
+
+		<div ng-if="fromCurrency.val < toCurrency.val">
+			<strong>TOTAL : {{newRate.number * fromCurrency.val * toCurrency.val}}</strong>
+		</div>
+		
+	</div>
+
+</div><!-- 
 <div>
-	<p>FROM <%= select_tag :from_currency, options_for_select(@rates.map{|k,v| [k, v]}), class: "currency" %> To <%= select_tag :to_currency, options_for_select(@rates.map{|k,v| [k, v]}), class: "currency" %> <%= link_to "Switch","void(0);", id: "switch_link" %></p>
-	<p><%= text_field_tag :number %></p>
+	<p>FROM <%#= select_tag :from_currency, options_for_select(@rates.map{|k,v| [k, v]}), class: "currency" %> To <%#= select_tag :to_currency, options_for_select(@rates.map{|k,v| [k, v]}), class: "currency" %> <%#= link_to "Switch","void(0);", id: "switch_link" %></p>
+	<p><%#= text_field_tag :number %></p>
 	<p><strong>Result :</strong></p>
 	<div id="results"></div>
-</div>
+</div> -->
