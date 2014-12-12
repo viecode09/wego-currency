@@ -1,0 +1,2 @@
+namespace :currency do
+end
