@@ -1,4 +1,13 @@
 $(document).ready ->
+  from_currency_text = "IDR"
+  to_currency_text = "USD"
+  $("#to_currency option").filter ->
+    return this.text == from_currency_text
+  .attr("selected", true)
+  $("#from_currency option").filter ->
+    return this.text == to_currency_text
+  .attr("selected", true)
+
   $("#number").keyup ->
     if parseFloat($("#from_currency").val()) < parseFloat($("#to_currency").val())
       sel_value = parseFloat($("#to_currency").val()) * parseFloat($("#from_currency").val()) * $(this).val()
