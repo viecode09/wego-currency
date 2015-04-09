@@ -1,6 +1,6 @@
 # About This Project
 
-This very simple Project is made for Wego Programming Test using Wego Currency API..
+This very simple Project is made for Demo Wego Exchange Rate Multi-Currency using Wego Currency API..
 
 Initially this project made by mixing Rails with jQuery, But I change my mind and use AngularJS for several operations..
 So Here's following technology that used in this Project :
